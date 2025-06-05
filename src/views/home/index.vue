@@ -83,7 +83,7 @@ const canvasEditor = new Editor() as IEditor;
 const state = reactive({
   show: false,
   select: null,
-  ruler: true,
+  ruler: false,
 });
 
 onMounted(() => {
@@ -145,14 +145,14 @@ onMounted(() => {
 });
 
 onUnmounted(() => canvasEditor.destory());
-const rulerSwitch = (val) => {
+const rulerSwitch = (val: any) => {
   if (val) {
     canvasEditor.rulerEnable();
   } else {
     canvasEditor.rulerDisable();
   }
   // 使标尺开关组件失焦，避免响应键盘的空格事件
-  document.activeElement.blur();
+  (document.activeElement as HTMLElement).blur();
 };
 
 provide('fabric', fabric);
