@@ -15,24 +15,24 @@
 </template>
 
 <script setup name="Logo">
-import { getWebInfo } from '@/api/material';
-import { get, pick } from 'lodash-es';
-const baseURL = import.meta.env.APP_APIHOST;
+// import { getWebInfo } from '@/api/material';
+// import { get, pick } from 'lodash-es';
+// const baseURL = import.meta.env.APP_APIHOST;
 
 const webInfo = ref({
-  name: '',
-  logo: '',
-  url: '',
+  name: 'NFPrompt',
+  img: '/NFPrompt_logo.png',
+  url: 'https://nfprompt.io/',
 });
 
-const getWebInfoFun = async () => {
-  const res = await getWebInfo();
-  const info = pick(res.data.data.attributes, ['name', 'url']);
-  info.img = baseURL + get(res.data, 'data.attributes.logo.data.attributes.url');
-  webInfo.value = info;
-};
+// const getWebInfoFun = async () => {
+//   const res = await getWebInfo();
+//   const info = pick(res.data.data.attributes, ['name', 'url']);
+//   info.img = baseURL + get(res.data, 'data.attributes.logo.data.attributes.url');
+//   webInfo.value = info;
+// };
 
-getWebInfoFun();
+// getWebInfoFun();
 </script>
 <style scoped lang="less">
 .logo {
@@ -40,14 +40,14 @@ getWebInfoFun();
   height: 44px;
   display: inline-block;
   margin-right: 10px;
-  margin-left: 2px;
+  margin-left: 10px;
   a {
     display: flex;
     height: 100%;
     align-items: center;
     img {
       display: inline-block;
-      height: 80%;
+      width: 100%;
     }
     span {
       font-size: 18px;
