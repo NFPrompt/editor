@@ -14,17 +14,17 @@
           <logo></logo>
           <!-- 导入 -->
           <Divider type="vertical" />
-          在线设计工具
+          Editor
         </div>
 
         <div class="right">
           <Button type="primary" to="/" size="smail" target="_blank">新建设计</Button>
           <Divider type="vertical" />
-          <a href="https://pro.kuaitu.cc/" target="_blank">
+          <!-- <a href="https://pro.kuaitu.cc/" target="_blank">
             <img width="15" :src="proIcon" alt="vue-fbric-editor" />
-          </a>
+          </a> -->
           <!-- 预览 -->
-          <login></login>
+          <!-- <login></login> -->
           <lang></lang>
         </div>
       </Header>
@@ -75,9 +75,9 @@
           show-sizer
         />
       </Content>
-      <Footer class="layout-footer-center">
+      <!-- <Footer class="layout-footer-center">
         2024 &copy; 北京迅单科技有限公司 京ICP备2022034407号-2
-      </Footer>
+      </Footer> -->
     </Layout>
   </div>
 </template>
@@ -86,7 +86,7 @@
 import { toRaw } from 'vue';
 import { Spin } from 'view-ui-plus';
 import qs from 'qs';
-import proIcon from '@/assets/icon/proIcon.png';
+// import proIcon from '@/assets/icon/proIcon.png';
 
 import { useRouter } from 'vue-router';
 const router = useRouter();
@@ -95,7 +95,7 @@ import banner from './components/banner.vue';
 // 顶部组件
 import logo from '@/components/logo.vue';
 import lang from '@/components/lang.vue';
-import login from '@/components/login';
+// import login from '@/components/login';
 
 import { getMaterialPreviewUrl } from '@/hooks/usePageList';
 import { getTmplTypes, getTmplList } from '@/api/material';

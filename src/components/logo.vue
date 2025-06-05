@@ -8,7 +8,7 @@
 
 <template>
   <div class="logo">
-    <a :href="webInfo.url" target="_blank">
+    <a :href="webInfo.url">
       <img :src="webInfo.img" alt="webInfo.name" />
     </a>
   </div>
@@ -22,7 +22,8 @@
 const webInfo = ref({
   name: 'NFPrompt',
   img: '/NFPrompt_logo.png',
-  url: 'https://nfprompt.io/',
+  // url: 'https://nfprompt.io/',
+  url: '/',
 });
 
 // const getWebInfoFun = async () => {
@@ -39,7 +40,7 @@ const webInfo = ref({
   width: 117px;
   height: 44px;
   display: inline-block;
-  margin-right: 10px;
+  // margin-right: 10px;
   margin-left: 10px;
   a {
     display: flex;

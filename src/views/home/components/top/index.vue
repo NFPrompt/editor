@@ -22,23 +22,23 @@
     </div>
 
     <div class="right">
-      <a href="https://pro.kuaitu.cc/" target="_blank" alt="商业版">
+      <!-- <a href="https://pro.kuaitu.cc/" target="_blank" alt="商业版">
         <img width="15" :src="proIcon" alt="vue-fbric-editor" />
-      </a>
+      </a> -->
       <!-- 管理员模式 -->
       <admin />
       <!-- 预览 -->
       <previewCurrent />
       <waterMark />
       <save></save>
-      <login></login>
+      <!-- <login></login> -->
       <lang></lang>
     </div>
   </Header>
 </template>
 
 <script name="Top" setup lang="ts">
-import proIcon from '@/assets/icon/proIcon.png';
+// import proIcon from '@/assets/icon/proIcon.png';
 // 导入元素
 import importJson from '@/components/importJSON.vue';
 import importFile from '@/components/importFile.vue';
@@ -50,7 +50,7 @@ import previewCurrent from '@/components/previewCurrent';
 import save from '@/components/save.vue';
 import lang from '@/components/lang.vue';
 import waterMark from '@/components/waterMark.vue';
-import login from '@/components/login';
+// import login from '@/components/login';
 import admin from '@/components/admin';
 import history from '@/components/history.vue';
 
